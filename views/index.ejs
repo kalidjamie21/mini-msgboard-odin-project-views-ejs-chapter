@@ -1,0 +1,12 @@
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <a href="/new">Create a new message</a>
+
+    <% messages.forEach((message) => { %>
+        <p><strong><%= message.user %></strong>: <%= message.text %> <%= message.added %></p>
+    <% }); %>
+
+    
+</body>
