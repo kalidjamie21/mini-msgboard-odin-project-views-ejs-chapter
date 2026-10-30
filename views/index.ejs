@@ -4,9 +4,12 @@
 <body>
     <a href="/new">Create a new message</a>
 
-    <% messages.forEach((message) => { %>
-        <p><strong><%= message.user %></strong>: <%= message.text %> <%= message.added %></p>
-    <% }); %>
+    <% messages.forEach((message, index) => { %>
+    <h3><%= message.user %></h3>
+    <p><%= message.text %></p>
+    <p><%= message.added.toLocaleString() %></p>
 
+    <a href="/messages/<%= index %>">Open</a>
+    <% }); %>
     
 </body>
